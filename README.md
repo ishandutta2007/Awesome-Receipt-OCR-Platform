@@ -27,61 +27,23 @@ How to Contribute
 
 Disclaimer
 
-SaaS/Hosted Platforms
+## SaaS/Hosted Platforms
 
-Veryfi
-AI-powered receipt and invoice OCR API that extracts structured JSON including merchant information, line items, taxes, totals, currencies, and other financial fields. Veryfi states that its receipt API supports 91 currencies and 38 languages.
-
-OCR.Space
-Cloud OCR API providing image and PDF text extraction with an API-oriented workflow suitable for applications that need straightforward OCR processing.
-
-Mindee
-Developer-focused document AI platform with a pre-trained Receipt model capable of extracting merchant information, totals, dates, line items, and other receipt fields. Its receipt model is designed for receipts from more than 50 countries.
-
-Klippa
-Intelligent document processing platform providing OCR, document classification, data extraction, and receipt/expense processing capabilities.
-
-Nanonets
-AI-powered document processing platform supporting OCR and structured extraction from receipts, invoices, and other financial documents.
-
-Amazon Textract
-AWS managed document-analysis service that extracts printed text, forms, tables, and structured information from scanned documents and images.
-
-Azure AI Document Intelligence
-Microsoft's document-processing platform for OCR, prebuilt document models, custom extraction, forms, invoices, receipts, and other structured-document workloads.
-
-Google Document AI
-Google's document understanding platform providing OCR, classification, parsing, extraction, and specialized processors for financial and business documents.
-
-Docsumo
-Intelligent document processing platform for extracting structured information from receipts, invoices, financial documents, and other semi-structured documents.
-
-Taggun
-Receipt OCR and data-extraction API focused on extracting structured receipt information for expense management, accounting, loyalty, and financial applications.
-
-Rossum
-Cloud-native intelligent document processing platform using AI-based document understanding and extraction for financial and business documents.
-
-Veryfi OCR API
-Specialized receipt and invoice extraction API returning structured JSON, including line items, taxes, totals, vendor details, and OCR text.
-
-Mindee Receipt API
-Specialized receipt extraction workflow with configurable fields and structured output for merchant, date, total, expense category, quantities, prices, and line items.
-
-Veryfi Mobile OCR SDK
-Mobile-oriented document capture and OCR infrastructure for applications that need receipt and expense-document ingestion.
-
-Dext
-Receipt and invoice capture platform focused on automating bookkeeping and accounting workflows from photographed or uploaded financial documents.
-
-Expensify
-Expense-management platform incorporating receipt scanning and automated expense-data extraction into reimbursement and accounting workflows.
-
-Receipt Bank
-Receipt and financial-document capture capabilities now provided through the Dext ecosystem, with extraction designed for accounting workflows.
-
-Rossum
-AI document-processing platform that can be used for automated extraction and processing of receipts and other transaction documents.
+| Platform / Product | Description & Capabilities | Starting Pricing | Free Tier / Trial Limits |
+| :--- | :--- | :--- | :--- |
+| **Veryfi OCR API & SDK** | AI-powered receipt, invoice, and bill OCR API extracting line items, taxes, totals, vendor details, and currency across 91 currencies and 38 languages. Includes Mobile Lens SDK. | **$500/month** (Starter tier; ~$0.08/receipt, $0.16/invoice up to ~6,250 receipts/month) | **Free forever:** 100 documents/month (with access to all document types & SDKs); **14-day free trial** for full-access platform features (no credit card required). |
+| **OCR.Space** | Cloud OCR API supporting multi-engine text and table extraction from receipt images and PDFs with searchable structured output. | **$30/month** (PRO plan; includes 300,000 requests/month, SLA, up to 100 MB file size) | **Free forever:** 25,000 requests/month (max 500 requests/day per IP, 1 MB max file size, max 3 pages/PDF). |
+| **Mindee (Receipt API)** | Developer-first document AI API with pre-trained receipt and invoice parsing models covering 50+ countries with line-item, merchant, and tax parsing. | **€44/month** (~$48/mo billed annually; Starter plan includes 500 pages/month or 6,000 annual credits) | **14-day free trial** with 200 pages included for testing (no credit card required; no permanent free tier). |
+| **Azure AI Document Intelligence** | Microsoft managed document AI service offering prebuilt models for receipts and invoices with line-item extraction, key-value pairs, and confidence scores. | **$10.00 per 1,000 pages** ($0.010/page) on Standard S0 Pay-as-you-go tier for prebuilt Receipt & Invoice models | **Free forever (F0 tier):** 500 pages/month (max 2 pages per document, max 4 MB file size). |
+| **Amazon Textract (Analyze Expense)** | AWS managed document analysis service featuring a specialized `AnalyzeExpense` API for parsing receipts and invoices with line-item and vendor recognition. | **$0.025 per page** for Analyze Expense API (first 100,000 pages/month; drops to $0.010/page beyond 100k; basic text OCR starts at $0.0015/page) | **3-month free trial:** 100 pages/month for Analyze Expense (and 1,000 pages/month for basic text detection). |
+| **Google Cloud Document AI (Expense Parser)** | Google Cloud document understanding platform with a specialized Expense Parser for extracting receipt items, taxes, totals, and payment metadata. | **$0.10 per document count** (1 count = up to 10 pages, effectively $0.01–$0.10/page or $100/1k pages; basic OCR is $1.50/1k pages) | **90-day free trial:** $300 in Google Cloud trial credits for testing Document AI processors (no permanent free tier for Expense Parser). |
+| **Taggun** | Real-time receipt OCR and data extraction API optimized for expense management, loyalty platforms, and accounting automation with fast JSON response. | **$28/month** (Developer tier; includes 500 receipt scans/month, overage at $0.056/scan) | **30-day free trial** with unlimited receipt scans in testing/sandbox mode (no credit card required). |
+| **Nanonets** | Automated document processing platform with pre-trained receipt models, human-in-the-loop validation, and custom AI workflow automation. | **$100/month** (Starter tier; includes 100 workflow block runs; pay-as-you-go extraction blocks at $0.10–$0.30/run) | **Free trial credits:** $50 in free trial credits (up to ~500 document pages/block runs, up to 3 users, no credit card required). |
+| **Docsumo** | Intelligent document processing platform for financial documents, extracting line items, tables, and key data points from complex receipts and invoices. | **$299/month** (Growth tier; includes ~1,000 documents/month, ~$0.30 per additional page) | **14-day free trial** with 100 document pages included (no credit card required; no permanent free tier). |
+| **Rossum** | Cloud-native intelligent document automation platform using transactional AI for end-to-end receipt, invoice, and bill capture. | **$18,000/year** (~$1,500/month; Starter annual contract with unlimited seats and core API ingestion) | **14-day free trial** with custom sandbox and sample receipt workflow validation (no permanent free tier). |
+| **Dext (formerly Receipt Bank)** | Accounting automation and bookkeeping platform designed to capture and extract receipts, bills, and invoices directly into Xero, QuickBooks, and Sage. | **$31.50/month** ($25.21/month billed annually; includes 5 user seats and up to 250 documents/month) | **14-day free trial** with full receipt capture and extraction access (no credit card required; no permanent free tier). |
+| **Expensify** | Expense management and business card platform featuring SmartScan for automated receipt OCR, mileage tracking, and expense report generation. | **$5/user/month** (Collect plan with accounting sync) or **$9/user/month** (Control plan); Free for personal use | **Free forever:** Unlimited SmartScans for individual users and expense tracking; **6-week free trial** for company business plans. |
+| **Klippa (DocHorizon / SpendControl)** | Intelligent document processing API and expense management suite for scanning, classifying, and extracting receipt and invoice data. | **€5/user/month** (SpendControl Expense) or **€95/month** (SpendControl AP Invoice up to 4,000 docs/yr); API priced on volume | **Free trial credits:** €25 in free API testing credits upon registration with a business email (or 14-day platform trial; no permanent free tier). |
 
 Receipt OCR platforms generally fall into several layers: image capture → image preprocessing → OCR → document/layout understanding → field extraction → line-item parsing → validation → structured JSON → accounting/ERP integration.
 
