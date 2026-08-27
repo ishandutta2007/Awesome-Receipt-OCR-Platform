@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#070A10" />
+    </linearGradient>
+
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="50%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(16, 185, 129, 0)" />
+      <stop offset="70%" stop-color="rgba(16, 185, 129, 0.4)" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F2937" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#111827" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1" />
+    </pattern>
+
+    <style>
+      @keyframes scanAnim {
+        0% { transform: translateY(0px); opacity: 0; }
+        15% { opacity: 1; }
+        85% { opacity: 1; }
+        100% { transform: translateY(180px); opacity: 0; }
+      }
+      @keyframes pulseBeam {
+        0%, 100% { opacity: 0.7; }
+        50% { opacity: 1; }
+      }
+      @keyframes floatEffect {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+      }
+      @keyframes badgePulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.04); }
+      }
+      .scanner-beam {
+        animation: scanAnim 3s ease-in-out infinite;
+      }
+      .floating-group {
+        animation: floatEffect 4s ease-in-out infinite;
+      }
+      .pulse-glow {
+        animation: pulseBeam 2s ease-in-out infinite;
+      }
+      .tag-anim {
+        transform-origin: center;
+        animation: badgePulse 3s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="360" fill="url(#bgGrad)" rx="16" />
+  <rect width="1200" height="360" fill="url(#grid)" rx="16" />
+
+  <!-- Ambient Glow Orbs -->
+  <circle cx="150" cy="180" r="140" fill="#6366F1" opacity="0.15" filter="url(#glow)" />
+  <circle cx="1020" cy="180" r="150" fill="#EC4899" opacity="0.15" filter="url(#glow)" />
+  <circle cx="950" cy="120" r="80" fill="#10B981" opacity="0.12" filter="url(#glow)" />
+
+  <!-- Left Content: Titles & Info -->
+  <g transform="translate(80, 0)">
+    <!-- Badge -->
+    <g transform="translate(0, 55)" class="tag-anim">
+      <rect width="210" height="30" rx="15" fill="rgba(99, 102, 241, 0.15)" stroke="rgba(139, 92, 246, 0.4)" stroke-width="1" />
+      <circle cx="16" cy="15" r="4" fill="#10B981" />
+      <text x="30" y="20" fill="#A5B4FC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" letter-spacing="1.2">INTELLIGENT DOCUMENT AI</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="140" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" letter-spacing="-0.5">
+      Awesome Receipt OCR
+    </text>
+    
+    <text x="0" y="195" fill="url(#primaryGlow)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" letter-spacing="-0.5">
+      &amp; Expense Intelligence
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="240" fill="#9CA3AF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="400">
+      Curated ecosystem of enterprise SaaS platforms, open-source models,
+    </text>
+    <text x="0" y="265" fill="#9CA3AF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="400">
+      and financial document extraction pipelines for developers &amp; builders.
+    </text>
+
+    <!-- Tags Row -->
+    <g transform="translate(0, 292)">
+      <!-- Tag 1 -->
+      <rect x="0" y="0" width="115" height="26" rx="6" fill="#1F2937" stroke="rgba(255, 255, 255, 0.1)" />
+      <text x="12" y="17" fill="#E5E7EB" font-family="sans-serif" font-size="12" font-weight="500">⚡ Receipt OCR</text>
+
+      <!-- Tag 2 -->
+      <rect x="125" y="0" width="125" height="26" rx="6" fill="#1F2937" stroke="rgba(255, 255, 255, 0.1)" />
+      <text x="137" y="17" fill="#E5E7EB" font-family="sans-serif" font-size="12" font-weight="500">📊 IDP &amp; Parsing</text>
+
+      <!-- Tag 3 -->
+      <rect x="260" y="0" width="135" height="26" rx="6" fill="#1F2937" stroke="rgba(255, 255, 255, 0.1)" />
+      <text x="272" y="17" fill="#E5E7EB" font-family="sans-serif" font-size="12" font-weight="500">🔓 Open Source</text>
+
+      <!-- Tag 4 -->
+      <rect x="405" y="0" width="125" height="26" rx="6" fill="#1F2937" stroke="rgba(255, 255, 255, 0.1)" />
+      <text x="417" y="17" fill="#E5E7EB" font-family="sans-serif" font-size="12" font-weight="500">☁️ Cloud SaaS</text>
+    </g>
+  </g>
+
+  <!-- Right Graphic: Interactive Receipt Card + Dynamic Scanning Ray -->
+  <g transform="translate(860, 50)" class="floating-group">
+    <!-- Receipt Card Frame -->
+    <rect x="0" y="0" width="230" height="260" rx="14" fill="url(#cardGrad)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.5" />
+    
+    <!-- Receipt Header Bar -->
+    <circle cx="24" cy="24" r="5" fill="#EF4444" opacity="0.8" />
+    <circle cx="40" cy="24" r="5" fill="#F59E0B" opacity="0.8" />
+    <circle cx="56" cy="24" r="5" fill="#10B981" opacity="0.8" />
+    <line x1="16" y1="44" x2="214" y2="44" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+
+    <!-- Receipt Mockup Content -->
+    <!-- Merchant Title -->
+    <rect x="24" y="60" width="90" height="10" rx="4" fill="#A5B4FC" opacity="0.8" />
+    <rect x="150" y="60" width="55" height="10" rx="4" fill="#6B7280" opacity="0.4" />
+
+    <!-- Line Items -->
+    <g transform="translate(24, 85)">
+      <rect x="0" y="0" width="110" height="7" rx="3" fill="#9CA3AF" opacity="0.4" />
+      <rect x="150" y="0" width="30" height="7" rx="3" fill="#9CA3AF" opacity="0.4" />
+
+      <rect x="0" y="16" width="95" height="7" rx="3" fill="#9CA3AF" opacity="0.4" />
+      <rect x="150" y="16" width="30" height="7" rx="3" fill="#9CA3AF" opacity="0.4" />
+
+      <rect x="0" y="32" width="125" height="7" rx="3" fill="#9CA3AF" opacity="0.4" />
+      <rect x="150" y="32" width="30" height="7" rx="3" fill="#9CA3AF" opacity="0.4" />
+
+      <rect x="0" y="48" width="80" height="7" rx="3" fill="#9CA3AF" opacity="0.4" />
+      <rect x="150" y="48" width="30" height="7" rx="3" fill="#9CA3AF" opacity="0.4" />
+    </g>
+
+    <!-- Divider -->
+    <line x1="24" y1="160" x2="204" y2="160" stroke="rgba(255, 255, 255, 0.12)" stroke-dasharray="4,4" stroke-width="1" />
+
+    <!-- Total Amount -->
+    <rect x="24" y="176" width="60" height="8" rx="3" fill="#9CA3AF" opacity="0.6" />
+    <rect x="140" y="173" width="64" height="14" rx="4" fill="#10B981" opacity="0.85" />
+
+    <!-- Barcode mockup -->
+    <g transform="translate(45, 210)" opacity="0.35">
+      <rect x="0" y="0" width="3" height="28" fill="#FFF" />
+      <rect x="6" y="0" width="2" height="28" fill="#FFF" />
+      <rect x="11" y="0" width="5" height="28" fill="#FFF" />
+      <rect x="19" y="0" width="2" height="28" fill="#FFF" />
+      <rect x="24" y="0" width="6" height="28" fill="#FFF" />
+      <rect x="33" y="0" width="2" height="28" fill="#FFF" />
+      <rect x="38" y="0" width="4" height="28" fill="#FFF" />
+      <rect x="45" y="0" width="7" height="28" fill="#FFF" />
+      <rect x="55" y="0" width="2" height="28" fill="#FFF" />
+      <rect x="60" y="0" width="5" height="28" fill="#FFF" />
+      <rect x="68" y="0" width="3" height="28" fill="#FFF" />
+      <rect x="74" y="0" width="6" height="28" fill="#FFF" />
+      <rect x="83" y="0" width="2" height="28" fill="#FFF" />
+      <rect x="88" y="0" width="5" height="28" fill="#FFF" />
+      <rect x="96" y="0" width="3" height="28" fill="#FFF" />
+      <rect x="102" y="0" width="7" height="28" fill="#FFF" />
+      <rect x="112" y="0" width="2" height="28" fill="#FFF" />
+      <rect x="117" y="0" width="4" height="28" fill="#FFF" />
+      <rect x="124" y="0" width="8" height="28" fill="#FFF" />
+      <rect x="135" y="0" width="3" height="28" fill="#FFF" />
+    </g>
+
+    <!-- Dynamic Scanning Ray -->
+    <g class="scanner-beam" transform="translate(10, 48)">
+      <rect x="0" y="0" width="210" height="20" fill="url(#scanGrad)" />
+      <line x1="0" y1="20" x2="210" y2="20" stroke="#10B981" stroke-width="2" filter="url(#softGlow)" />
+    </g>
+
+    <!-- Extracted JSON Pill (Floating) -->
+    <g transform="translate(-40, 195)" filter="url(#softGlow)">
+      <rect width="130" height="34" rx="8" fill="#1E1B4B" stroke="#6366F1" stroke-width="1.2" />
+      <text x="14" y="21" fill="#A5B4FC" font-family="monospace" font-size="12" font-weight="600">{ JSON: 99.8% }</text>
+    </g>
+  </g>
+</svg>
